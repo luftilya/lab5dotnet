@@ -3,5 +3,5 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="mainprog/mainprog.csproj" />
-  <Project Path="wonderful_string_tools/wonderful_string_tools.csproj" />
+  <Project Path="wonderful_string_tools/wonderful_string_tools.csproj" Id="28331200-44ca-425d-83d5-6ef620465c45" />
 </Solution>

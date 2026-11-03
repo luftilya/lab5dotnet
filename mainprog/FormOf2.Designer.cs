@@ -80,11 +80,13 @@
             get_label.AutoEllipsis = true;
             get_label.AutoSize = true;
             get_label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            get_label.Location = new Point(39, 335);
+            get_label.Location = new Point(62, 335);
+            get_label.MinimumSize = new Size(1100, 46);
             get_label.Name = "get_label";
-            get_label.Size = new Size(659, 46);
+            get_label.Size = new Size(1100, 46);
             get_label.TabIndex = 11;
             get_label.Text = "ОБРАТНЫЙ ПОРЯДОК ПОЯВИТСЯ ЗДЕСЬ";
+            get_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 

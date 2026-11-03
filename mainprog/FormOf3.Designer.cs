@@ -40,11 +40,13 @@
             get_label.AutoEllipsis = true;
             get_label.AutoSize = true;
             get_label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            get_label.Location = new Point(59, 335);
+            get_label.Location = new Point(82, 335);
+            get_label.MinimumSize = new Size(1100, 46);
             get_label.Name = "get_label";
-            get_label.Size = new Size(1093, 46);
+            get_label.Size = new Size(1100, 46);
             get_label.TabIndex = 16;
             get_label.Text = "ПРЕДЛОЖЕНИЕ С УДОВЕННЫЕМИ СОГЛАСНЫМИ ПОЯВИТСЯ ЗДЕСЬ";
+            get_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button
             // 
