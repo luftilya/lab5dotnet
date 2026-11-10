@@ -109,6 +109,9 @@
             Controls.Add(textBox);
             Controls.Add(set_label);
             Controls.Add(history_label);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormOf2";
             Text = "Напечатать слова в обратном порядке";
             ResumeLayout(false);

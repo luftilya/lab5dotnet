@@ -97,6 +97,9 @@
             Controls.Add(textBox);
             Controls.Add(set_label);
             Controls.Add(history_label);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormOf3";
             Text = "Удвоить все согласные буквы в предложении";
             ResumeLayout(false);

@@ -152,6 +152,9 @@
             Controls.Add(word1_textBox);
             Controls.Add(setword1_label);
             Controls.Add(history_label);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormOf1";
             Text = "Определить, какое из двух слов длиннее и насколько";
             ResumeLayout(false);
