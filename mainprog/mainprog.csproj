@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\lab5_task1\lab5_task1.csproj" />
+    <ProjectReference Include="..\lab5_task2\lab5_task2.csproj" />
+    <ProjectReference Include="..\lab5_task3\lab5_task3.csproj" />
     <ProjectReference Include="..\wonderful_string_tools\wonderful_string_tools.csproj" />
   </ItemGroup>
 

@@ -1,3 +1,6 @@
+using lab5_task1;
+using lab5_task2;
+using lab5_task3;
 using wonderful_string_tools;
 
 namespace lab5;
@@ -25,71 +28,13 @@ internal static class Program
             switch (input)
             {
                 case "1":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("@ Определить, какое из двух слов длиннее и насколько.");
-                        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                        Console.Write("@ Введите первое слово: ");
-
-                        string? w1 = Console.ReadLine();
-                        
-                        if (string.IsNullOrWhiteSpace(w1))
-                            break;
-
-                        Console.Write("@ Введите второе слово: ");
-
-                        string? w2 = Console.ReadLine();
-                        
-                        if (string.IsNullOrWhiteSpace(w2))
-                            break;
-
-                        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-
-                        if (w1.Length == w2.Length)
-                            Console.WriteLine($"@ Строки {w1} и {w2} равны.");
-
-                        else if (StringTools.IsFirstWordLonger(w1, w2))
-                            Console.WriteLine($"@ Первое слово {w1} длиннее второго слова {w2} на {StringTools.HowWordLonger(w1, w2)} символов.");
-                        else
-                            Console.WriteLine($"@ Второе слово {w2} длиннее первого слова {w1} на {StringTools.HowWordLonger(w1, w2)} символов.");
-                        Console.ReadKey();
-                    }
+                    task1.Run();
                     break;
                 case "2":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("@ Напечатать последовательность слов в обратном порядке.");
-                        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                        Console.Write("@ Введите предложение С ЗАПЯТОЙ МЕЖДУ СЛОВАМИ БЕЗ ПРОБЕЛОВ: ");
-                        
-                        input = Console.ReadLine();
-
-                        if (string.IsNullOrWhiteSpace(input))
-                            break;
-                        
-                        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                        Console.WriteLine("@ Предложение в обратном порядке слов:");
-                        Console.WriteLine($"@ {StringTools.ReverseWordsPrint(input)}.");
-                        Console.ReadKey();
-                    }
+                    task2.Run();
                     break;
                 case "3":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("@ Удвоить все согласные буквы.");
-                        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                        Console.Write("@ Введите предложение по-русски: ");
-                        
-                        input = Console.ReadLine();
-
-                        if (string.IsNullOrWhiteSpace(input))
-                            break;
-
-                        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                        Console.Write("@ Удвоение согласных: ");
-                        Console.WriteLine(StringTools.ToDoubleConsonants(input));
-                        Console.ReadKey();
-                    }
+                    task3.Run();
                     break;
                 case "4":
                     Application.Run(new FormOf1());
