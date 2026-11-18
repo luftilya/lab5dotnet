@@ -1,24 +1,47 @@
-﻿using wonderful_string_tools;
+﻿using WonderfulStringsTools;
 
-namespace lab5_task2;
+namespace Lab5Task2;
 
-public class task2
+public class Task2
 {
     public static void Run()
     {
         Console.Clear();
-        Console.WriteLine("@ Напечатать последовательность слов в обратном порядке.");
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        Console.Write("@ Введите предложение С ЗАПЯТОЙ МЕЖДУ СЛОВАМИ БЕЗ ПРОБЕЛОВ: ");
+        Console.Write("""
+            @ Напечатать последовательность слов в обратном порядке.
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Введите предложение С ЗАПЯТОЙ МЕЖДУ СЛОВАМИ БЕЗ ПРОБЕЛОВ: 
+            """);
 
         string? input = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(input))
             return;
 
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        Console.WriteLine("@ Предложение в обратном порядке слов:");
-        Console.WriteLine($"@ {StringTools.ReverseWordsPrint(input)}.");
+        var bannedSignes = " .;/|\\`~@#№$%^:&?*()+=<>";
+
+        foreach (char sign in bannedSignes)
+        {
+            if (input.Contains(sign))
+            {
+                Console.Write("""
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                @ ОШИБКА! Вы использовали неправильный разделитель слов!
+                @ Попробуйте ещё раз (нажмите Enter для выхода).
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                """);
+                Console.ReadKey();
+                return;
+            }
+        }
+
+        Console.Write($"""
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Предложение в обратном порядке слов:
+            @ {StringTools.ReverseWordsPrint(input)}.
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Для выхода нажмите Enter.                              @
+            """);
         Console.ReadKey();
     }
 }

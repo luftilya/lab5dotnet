@@ -1,4 +1,4 @@
-﻿namespace lab5
+﻿namespace Lab5
 {
     partial class FormOf2
     {
@@ -102,6 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkGray;
             ClientSize = new Size(1216, 408);
             Controls.Add(label1);
             Controls.Add(get_label);

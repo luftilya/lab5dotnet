@@ -5,9 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using wonderful_string_tools;
 
-namespace lab5;
+using WonderfulStringsTools;
+
+namespace Lab5;
 
 public partial class FormOf1 : Form
 {

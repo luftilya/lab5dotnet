@@ -1,24 +1,29 @@
-﻿using wonderful_string_tools;
+﻿using WonderfulStringsTools;
 
-namespace lab5_task3;
+namespace Lab5Task3;
 
-public class task3
+public class Task3
 {
     public static void Run()
     {
         Console.Clear();
-        Console.WriteLine("@ Удвоить все согласные буквы.");
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        Console.Write("@ Введите предложение по-русски: ");
+        Console.Write("""
+            @ Удвоить все согласные кириллические буквы.
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Введите предложение на кириллице: 
+            """);
 
         string? input = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(input))
             return;
 
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        Console.Write("@ Удвоение согласных: ");
-        Console.WriteLine(StringTools.ToDoubleConsonants(input));
+        Console.Write($"""
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Удвоение согласных: {StringTools.ToDoubleConsonants(input)}
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Для выхода нажмите Enter.                  @
+            """);
         Console.ReadKey();
     }
 }

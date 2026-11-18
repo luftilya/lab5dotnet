@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>lab5</RootNamespace>
-    <AssemblyName>lab5</AssemblyName>
+    <RootNamespace>Lab5</RootNamespace>
+    <AssemblyName>Lab5</AssemblyName>
     <ApplicationIcon>self_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lab5_task1\lab5_task1.csproj" />
-    <ProjectReference Include="..\lab5_task2\lab5_task2.csproj" />
-    <ProjectReference Include="..\lab5_task3\lab5_task3.csproj" />
-    <ProjectReference Include="..\wonderful_string_tools\wonderful_string_tools.csproj" />
+    <ProjectReference Include="..\lab5_task1\Lab5Task1.csproj" />
+    <ProjectReference Include="..\lab5_task2\Lab5Task2.csproj" />
+    <ProjectReference Include="..\lab5_task3\Lab5Task3.csproj" />
+    <ProjectReference Include="..\WonderfulStringsTools\WonderfulStringsTools.csproj" />
   </ItemGroup>
 
 </Project>

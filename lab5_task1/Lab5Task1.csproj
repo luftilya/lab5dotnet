@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\wonderful_string_tools\wonderful_string_tools.csproj" />
+    <ProjectReference Include="..\WonderfulStringsTools\WonderfulStringsTools.csproj" />
   </ItemGroup>
 
 </Project>

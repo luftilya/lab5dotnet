@@ -1,4 +1,4 @@
-﻿namespace lab5
+﻿namespace Lab5
 {
     partial class FormOf1
     {
@@ -122,25 +122,30 @@
             setmostlong_label.AutoSize = true;
             setmostlong_label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
             setmostlong_label.Location = new Point(797, 383);
+            setmostlong_label.MinimumSize = new Size(363, 46);
             setmostlong_label.Name = "setmostlong_label";
             setmostlong_label.Size = new Size(363, 46);
             setmostlong_label.TabIndex = 8;
             setmostlong_label.Text = "ЕЩЁ НЕ ОПРЕДЕЛЕНО";
+            setmostlong_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // sethowlong_label
             // 
             sethowlong_label.AutoSize = true;
             sethowlong_label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
             sethowlong_label.Location = new Point(797, 488);
+            sethowlong_label.MinimumSize = new Size(363, 46);
             sethowlong_label.Name = "sethowlong_label";
             sethowlong_label.Size = new Size(363, 46);
             sethowlong_label.TabIndex = 9;
             sethowlong_label.Text = "ЕЩЁ НЕ ОПРЕДЕЛЕНО";
+            sethowlong_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormOf1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkGray;
             ClientSize = new Size(1287, 623);
             Controls.Add(sethowlong_label);
             Controls.Add(setmostlong_label);

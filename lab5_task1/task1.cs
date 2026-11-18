@@ -1,37 +1,76 @@
-﻿using wonderful_string_tools;
+﻿using WonderfulStringsTools;
 
-namespace lab5_task1;
+namespace Lab5Task1;
 
-public class task1
+public class Task1
 {
     public static void Run()
     {
         Console.Clear();
-        Console.WriteLine("@ Определить, какое из двух слов длиннее и насколько.");
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        Console.Write("@ Введите первое слово: ");
+        Console.Write("""
+            @ Определить, какое из двух слов длиннее и насколько.
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Введите первое слово: 
+            """);
 
-        string? w1 = Console.ReadLine();
+        string? firstWord = Console.ReadLine();
 
-        if (string.IsNullOrWhiteSpace(w1))
+        if (string.IsNullOrWhiteSpace(firstWord))
             return;
+
+        var bannedSignes = " .;/|\\`~@#№$%^:&?*()+=<>";
+
+        foreach (char sign in bannedSignes)
+        {
+            if (firstWord.Contains(sign))
+            {
+                Console.Write("""
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                @ ОШИБКА! Вы использовали разделитель или разделители
+                @ при вводе слова, что неправильно.
+                @ Попробуйте ещё раз (нажмите Enter для выхода).
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                """);
+                Console.ReadKey();
+                return;
+            }
+        }
 
         Console.Write("@ Введите второе слово: ");
 
-        string? w2 = Console.ReadLine();
+        string? secondWord = Console.ReadLine();
 
-        if (string.IsNullOrWhiteSpace(w2))
+        if (string.IsNullOrWhiteSpace(secondWord))
             return;
 
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        foreach (char sign in bannedSignes)
+        {
+            if (firstWord.Contains(sign))
+            {
+                Console.Write("""
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                @ ОШИБКА! Вы использовали разделитель или разделители
+                @ при вводе слова, что неправильно.
+                @ Попробуйте ещё раз (нажмите Enter для выхода).
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                """);
+                Console.ReadKey();
+                return;
+            }
+        }
 
-        if (w1.Length == w2.Length)
-            Console.WriteLine($"@ Строки {w1} и {w2} равны.");
+        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
-        else if (StringTools.IsFirstWordLonger(w1, w2))
-            Console.WriteLine($"@ Первое слово {w1} длиннее второго слова {w2} на {StringTools.HowWordLonger(w1, w2)} символов.");
+        if (firstWord.Length == secondWord.Length)
+            Console.WriteLine($"@ Строки \"{firstWord}\" и \"{secondWord}\" равны.");
+        else if (StringTools.IsFirstWordLonger(firstWord, secondWord))
+            Console.WriteLine($"@ Первое слово \"{firstWord}\" длиннее второго слова \"{secondWord}\" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.");
         else
-            Console.WriteLine($"@ Второе слово {w2} длиннее первого слова {w1} на {StringTools.HowWordLonger(w1, w2)} символов.");
+            Console.WriteLine($"@ Второе слово \"{secondWord}\" длиннее первого слова \"{firstWord}\" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.");
+        Console.Write("""
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @ Для выхода нажмите Enter.                           @
+            """);
         Console.ReadKey();
     }
 }

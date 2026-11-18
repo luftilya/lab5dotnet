@@ -1,4 +1,4 @@
-﻿namespace lab5
+﻿namespace Lab5
 {
     partial class FormOf3
     {
@@ -40,7 +40,7 @@
             get_label.AutoEllipsis = true;
             get_label.AutoSize = true;
             get_label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            get_label.Location = new Point(82, 335);
+            get_label.Location = new Point(155, 335);
             get_label.MinimumSize = new Size(1100, 46);
             get_label.Name = "get_label";
             get_label.Size = new Size(1100, 46);
@@ -51,7 +51,7 @@
             // button
             // 
             button.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button.Location = new Point(460, 250);
+            button.Location = new Point(533, 250);
             button.Name = "button";
             button.Size = new Size(309, 60);
             button.TabIndex = 15;
@@ -64,7 +64,7 @@
             textBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
             textBox.Location = new Point(338, 177);
             textBox.Name = "textBox";
-            textBox.Size = new Size(846, 51);
+            textBox.Size = new Size(1073, 51);
             textBox.TabIndex = 14;
             // 
             // set_label
@@ -83,15 +83,17 @@
             history_label.Font = new Font("Segoe UI Black", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
             history_label.Location = new Point(65, 41);
             history_label.Name = "history_label";
-            history_label.Size = new Size(1133, 81);
+            history_label.Size = new Size(1346, 81);
             history_label.TabIndex = 12;
-            history_label.Text = "Удвоить согласные в предложении";
+            history_label.Text = "Удвоить согласные кириллические буквы";
+            history_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormOf3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1263, 401);
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(1433, 401);
             Controls.Add(get_label);
             Controls.Add(button);
             Controls.Add(textBox);
