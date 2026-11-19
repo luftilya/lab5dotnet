@@ -23,6 +23,12 @@ public partial class FormOf2 : Form
 
         var bannedSignes = " .;/|\\`~@#№$%^:&?*()+=<>";
 
+        if (!textBox.Text.Contains(',') || textBox.Text[textBox.Text.Length - 1] == ',')
+        {
+            get_label.Text = "ВВЕДИТЕ ЕЩЁ ХОТЯ БЫ ОДНО СЛОВО";
+            return;
+        }    
+
         foreach(char sign in textBox.Text)
         {
             if (bannedSignes.Contains(sign))

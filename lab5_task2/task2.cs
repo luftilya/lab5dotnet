@@ -27,6 +27,7 @@ public class Task2
                 ConsoleMenu.WriteContent("""
                     ОШИБКА! Вы использовали неправильный разделитель слов!
                     Попробуйте ещё раз (нажмите Enter для выхода).
+
                     """);
                 ConsoleMenu.WriteFiller();
                 Console.ReadKey();
@@ -37,6 +38,7 @@ public class Task2
         ConsoleMenu.WriteFiller();
         ConsoleMenu.WriteContent($"""
             Предложение в обратном порядке слов: {StringTools.ReverseWordsPrint(input)}.
+
             """);
         ConsoleMenu.WriteEnd();
     }

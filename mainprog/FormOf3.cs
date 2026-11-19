@@ -19,5 +19,7 @@ public partial class FormOf3 : Form
     {
         if (!string.IsNullOrWhiteSpace(textBox.Text))
             get_label.Text = StringTools.ToDoubleConsonants(textBox.Text);
+        else
+            get_label.Text = "ПРЕДЛОЖЕНИЕ С УДВОЕННЫМИ СОГЛАСНЫМИ ПОЯВИТСЯ ЗДЕСЬ";
     }
 }

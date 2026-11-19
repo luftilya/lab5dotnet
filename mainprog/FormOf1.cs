@@ -21,7 +21,10 @@ public partial class FormOf1 : Form
             && !string.IsNullOrWhiteSpace(word2_textBox.Text))
         {
             if (word1_textBox.Text.Length == word2_textBox.Text.Length)
+            {
                 setmostlong_label.Text = "СТРОКИ РАВНЫ";
+                sethowlong_label.Text = "СТРОКИ РАВНЫ";
+            }
             else if (StringTools.IsFirstWordLonger(word1_textBox.Text, word2_textBox.Text))
             {
                 setmostlong_label.Text = word1_textBox.Text;

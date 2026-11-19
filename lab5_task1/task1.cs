@@ -63,7 +63,7 @@ public class Task1
 
         if (firstWord.Length == secondWord.Length)
             ConsoleMenu.WriteContent($"""
-                Строки "{firstWord}" и "{secondWord}" равны.
+                Строки "{firstWord}" и "{secondWord}" равны по длине.
 
                 """);
         else if (StringTools.IsFirstWordLonger(firstWord, secondWord))
