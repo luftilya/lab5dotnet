@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using WonderfulStringsTools;
+using WonderfulStringsToolsLib;
 
 namespace Lab5;
 

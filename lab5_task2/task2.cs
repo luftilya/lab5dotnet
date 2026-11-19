@@ -1,4 +1,5 @@
-﻿using WonderfulStringsTools;
+﻿using ConsoleMenuLib;
+using WonderfulStringsToolsLib;
 
 namespace Lab5Task2;
 
@@ -7,11 +8,9 @@ public class Task2
     public static void Run()
     {
         Console.Clear();
-        Console.Write("""
-            @ Напечатать последовательность слов в обратном порядке.
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Введите предложение С ЗАПЯТОЙ МЕЖДУ СЛОВАМИ БЕЗ ПРОБЕЛОВ: 
-            """);
+        ConsoleMenu.WriteTask(2);
+        ConsoleMenu.WriteContent(
+            "Введите предложение С ЗАПЯТОЙ МЕЖДУ СЛОВАМИ БЕЗ ПРОБЕЛОВ: ");
 
         string? input = Console.ReadLine();
 
@@ -24,24 +23,21 @@ public class Task2
         {
             if (input.Contains(sign))
             {
-                Console.Write("""
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                @ ОШИБКА! Вы использовали неправильный разделитель слов!
-                @ Попробуйте ещё раз (нажмите Enter для выхода).
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                """);
+                ConsoleMenu.WriteFiller();
+                ConsoleMenu.WriteContent("""
+                    ОШИБКА! Вы использовали неправильный разделитель слов!
+                    Попробуйте ещё раз (нажмите Enter для выхода).
+                    """);
+                ConsoleMenu.WriteFiller();
                 Console.ReadKey();
                 return;
             }
         }
 
-        Console.Write($"""
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Предложение в обратном порядке слов:
-            @ {StringTools.ReverseWordsPrint(input)}.
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Для выхода нажмите Enter.                              @
+        ConsoleMenu.WriteFiller();
+        ConsoleMenu.WriteContent($"""
+            Предложение в обратном порядке слов: {StringTools.ReverseWordsPrint(input)}.
             """);
-        Console.ReadKey();
+        ConsoleMenu.WriteEnd();
     }
 }

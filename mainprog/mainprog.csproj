@@ -16,10 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\InterfaceLibs\ConsoleMenuLib\ConsoleMenuLib.csproj" />
     <ProjectReference Include="..\lab5_task1\Lab5Task1.csproj" />
     <ProjectReference Include="..\lab5_task2\Lab5Task2.csproj" />
     <ProjectReference Include="..\lab5_task3\Lab5Task3.csproj" />
-    <ProjectReference Include="..\WonderfulStringsTools\WonderfulStringsTools.csproj" />
+    <ProjectReference Include="..\WonderfulStringsTools\WonderfulStringsToolsLib.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace WonderfulStringsTools;
+﻿namespace WonderfulStringsToolsLib;
 
 public class StringTools
 {

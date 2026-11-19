@@ -3,9 +3,10 @@
     <File Path="README.md" />
     <File Path="self_icon.ico" />
   </Folder>
+  <Project Path="../InterfaceLibs/ConsoleMenuLib/ConsoleMenuLib.csproj" />
   <Project Path="lab5_task1/Lab5Task1.csproj" Id="1c101d5a-6d1b-43a5-845e-9c543acded8f" />
   <Project Path="lab5_task2/Lab5Task2.csproj" Id="ffd03b87-f295-4abd-93ae-103b4e2b5e3f" />
   <Project Path="lab5_task3/Lab5Task3.csproj" Id="ede401bf-2291-4366-8a3c-ed8f4c95ae68" />
-  <Project Path="mainprog/mainprog.csproj" DisplayName="Mainprog" />
-  <Project Path="WonderfulStringsTools/WonderfulStringsTools.csproj" Id="0714eb8c-b3c2-4318-8a1e-dc8febb3ad3b" />
+  <Project Path="mainprog/mainprog.csproj" DisplayName="MainProg" />
+  <Project Path="WonderfulStringsTools/WonderfulStringsToolsLib.csproj" Id="0714eb8c-b3c2-4318-8a1e-dc8febb3ad3b" />
 </Solution>

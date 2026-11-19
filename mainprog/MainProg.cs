@@ -1,7 +1,9 @@
-using WonderfulStringsTools;
+using ConsoleMenuLib;
+using WonderfulStringsToolsLib;
 using Lab5Task1;
 using Lab5Task2;
 using Lab5Task3;
+using System.Text;
 
 namespace Lab5;
 
@@ -12,18 +14,20 @@ internal static class MainProg
     {
         ApplicationConfiguration.Initialize();
 
+        ConsoleMenu.LabNumber = 5;
+        ConsoleMenu.SymbolFiller = '@';
+        ConsoleMenu.LabTasks = new List<StringBuilder>
+        {
+            new StringBuilder("Определить, какое из двух слов длиннее и насколько."),
+            new StringBuilder("Напечатать последовательность слов в обратном порядке."),
+            new StringBuilder("Удвоить все согласные буквы.")
+        };
+        ConsoleMenu.Init();
+
         while (true)
         {
             Console.Clear();
-            Console.Write("""
-                @ Лабораторная работа №5. Выполнили Илья Зеленев и Станислав Сахаров, бТИИ-251, вариант 1 @
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                @ 1) Определить, какое из двух слов длиннее и насколько.    @ 4) -> Windows Forms.        @
-                @ 2) Напечатать последовательность слов в обратном порядке. @ 5) -> Windows Forms.        @
-                @ 3) Удвоить все согласные буквы.                           @ 6) -> Windows Forms.        @
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                @ Введите номер задания и нажмите enter (для выхода нажмите Ctrl^C): 
-                """);
+            ConsoleMenu.WriteMenu();
 
             string? input = Console.ReadLine();
 

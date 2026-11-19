@@ -1,4 +1,5 @@
-﻿using WonderfulStringsTools;
+﻿using ConsoleMenuLib;
+using WonderfulStringsToolsLib;
 
 namespace Lab5Task1;
 
@@ -7,11 +8,8 @@ public class Task1
     public static void Run()
     {
         Console.Clear();
-        Console.Write("""
-            @ Определить, какое из двух слов длиннее и насколько.
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Введите первое слово: 
-            """);
+        ConsoleMenu.WriteTask(1);
+        ConsoleMenu.WriteContent("Введите первое слово: ");
 
         string? firstWord = Console.ReadLine();
 
@@ -24,19 +22,20 @@ public class Task1
         {
             if (firstWord.Contains(sign))
             {
-                Console.Write("""
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                @ ОШИБКА! Вы использовали разделитель или разделители
-                @ при вводе слова, что неправильно.
-                @ Попробуйте ещё раз (нажмите Enter для выхода).
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                """);
+                ConsoleMenu.WriteFiller();
+                ConsoleMenu.WriteContent("""
+                    ОШИБКА! Вы использовали разделитель или разделители
+                    при вводе слова, что неправильно.
+                    Попробуйте ещё раз (нажмите Enter для выхода).
+
+                    """);
+                ConsoleMenu.WriteFiller();
                 Console.ReadKey();
                 return;
             }
         }
 
-        Console.Write("@ Введите второе слово: ");
+        ConsoleMenu.WriteContent("Введите второе слово: ");
 
         string? secondWord = Console.ReadLine();
 
@@ -45,32 +44,39 @@ public class Task1
 
         foreach (char sign in bannedSignes)
         {
-            if (firstWord.Contains(sign))
+            if (secondWord.Contains(sign))
             {
-                Console.Write("""
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                @ ОШИБКА! Вы использовали разделитель или разделители
-                @ при вводе слова, что неправильно.
-                @ Попробуйте ещё раз (нажмите Enter для выхода).
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                """);
+                ConsoleMenu.WriteFiller();
+                ConsoleMenu.WriteContent("""
+                    ОШИБКА! Вы использовали разделитель или разделители
+                    при вводе слова, что неправильно.
+                    Попробуйте ещё раз (нажмите Enter для выхода).
+
+                    """);
+                ConsoleMenu.WriteFiller();
                 Console.ReadKey();
                 return;
             }
         }
 
-        Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        ConsoleMenu.WriteFiller();
 
         if (firstWord.Length == secondWord.Length)
-            Console.WriteLine($"@ Строки \"{firstWord}\" и \"{secondWord}\" равны.");
+            ConsoleMenu.WriteContent($"""
+                Строки "{firstWord}" и "{secondWord}" равны.
+
+                """);
         else if (StringTools.IsFirstWordLonger(firstWord, secondWord))
-            Console.WriteLine($"@ Первое слово \"{firstWord}\" длиннее второго слова \"{secondWord}\" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.");
+            ConsoleMenu.WriteContent($"""
+                Первое слово "{firstWord}" длиннее второго слова "{secondWord}" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.
+                
+                """);
         else
-            Console.WriteLine($"@ Второе слово \"{secondWord}\" длиннее первого слова \"{firstWord}\" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.");
-        Console.Write("""
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Для выхода нажмите Enter.                           @
-            """);
-        Console.ReadKey();
+            ConsoleMenu.WriteContent($"""
+                Второе слово "{secondWord}" длиннее первого слова "{firstWord}" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.
+                
+                """
+                );
+        ConsoleMenu.WriteEnd();
     }
 }

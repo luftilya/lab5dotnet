@@ -1,4 +1,5 @@
-﻿using WonderfulStringsTools;
+﻿using ConsoleMenuLib;
+using WonderfulStringsToolsLib;
 
 namespace Lab5Task3;
 
@@ -7,23 +8,19 @@ public class Task3
     public static void Run()
     {
         Console.Clear();
-        Console.Write("""
-            @ Удвоить все согласные кириллические буквы.
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Введите предложение на кириллице: 
-            """);
+        ConsoleMenu.WriteTask(3);
+        ConsoleMenu.WriteContent("Введите предложение на кириллице: ");
 
         string? input = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(input))
             return;
 
-        Console.Write($"""
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Удвоение согласных: {StringTools.ToDoubleConsonants(input)}
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            @ Для выхода нажмите Enter.                  @
+        ConsoleMenu.WriteFiller();
+        ConsoleMenu.WriteContent($"""
+            Удвоение согласных: {StringTools.ToDoubleConsonants(input)}
+
             """);
-        Console.ReadKey();
+        ConsoleMenu.WriteEnd();
     }
 }
