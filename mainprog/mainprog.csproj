@@ -8,11 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Lab5</RootNamespace>
     <AssemblyName>Lab5</AssemblyName>
-    <ApplicationIcon>self_icon.ico</ApplicationIcon>
+    <ApplicationIcon>doc &amp; pic\cool-icon-labs.ico</ApplicationIcon>
+    <StartupObject>Lab5.MainProg</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="self_icon.ico" />
+    <Content Include="doc &amp; pic\cool-icon-labs.ico" />
   </ItemGroup>
 
   <ItemGroup>

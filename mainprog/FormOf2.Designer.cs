@@ -123,8 +123,6 @@
 
         private Label history_label;
         private Button button;
-        private TextBox word2_textBox;
-        private Label setword2_label;
         private TextBox textBox;
         private Label set_label;
         private Label get_label;

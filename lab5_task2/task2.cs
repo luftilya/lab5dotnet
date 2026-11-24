@@ -9,7 +9,7 @@ public class Task2
     {
         Console.Clear();
         ConsoleMenu.WriteTask(2);
-        ConsoleMenu.WriteContent(
+        ConsoleMenu.Write(
             "Введите предложение С ЗАПЯТОЙ МЕЖДУ СЛОВАМИ БЕЗ ПРОБЕЛОВ: ");
 
         string? input = Console.ReadLine();
@@ -24,7 +24,7 @@ public class Task2
             if (input.Contains(sign))
             {
                 ConsoleMenu.WriteFiller();
-                ConsoleMenu.WriteContent("""
+                ConsoleMenu.Write("""
                     ОШИБКА! Вы использовали неправильный разделитель слов!
                     Попробуйте ещё раз (нажмите Enter для выхода).
 
@@ -36,7 +36,7 @@ public class Task2
         }
 
         ConsoleMenu.WriteFiller();
-        ConsoleMenu.WriteContent($"""
+        ConsoleMenu.Write($"""
             Предложение в обратном порядке слов: {StringTools.ReverseWordsPrint(input)}.
 
             """);

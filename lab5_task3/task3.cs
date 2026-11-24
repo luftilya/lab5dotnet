@@ -9,7 +9,7 @@ public class Task3
     {
         Console.Clear();
         ConsoleMenu.WriteTask(3);
-        ConsoleMenu.WriteContent("Введите предложение на кириллице: ");
+        ConsoleMenu.Write("Введите предложение на кириллице: ");
 
         string? input = Console.ReadLine();
 
@@ -17,7 +17,7 @@ public class Task3
             return;
 
         ConsoleMenu.WriteFiller();
-        ConsoleMenu.WriteContent($"""
+        ConsoleMenu.Write($"""
             Удвоение согласных: {StringTools.ToDoubleConsonants(input)}
 
             """);

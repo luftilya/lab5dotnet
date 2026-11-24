@@ -9,7 +9,7 @@ public class Task1
     {
         Console.Clear();
         ConsoleMenu.WriteTask(1);
-        ConsoleMenu.WriteContent("Введите первое слово: ");
+        ConsoleMenu.Write("Введите первое слово: ");
 
         string? firstWord = Console.ReadLine();
 
@@ -23,7 +23,7 @@ public class Task1
             if (firstWord.Contains(sign))
             {
                 ConsoleMenu.WriteFiller();
-                ConsoleMenu.WriteContent("""
+                ConsoleMenu.Write("""
                     ОШИБКА! Вы использовали разделитель или разделители
                     при вводе слова, что неправильно.
                     Попробуйте ещё раз (нажмите Enter для выхода).
@@ -35,7 +35,7 @@ public class Task1
             }
         }
 
-        ConsoleMenu.WriteContent("Введите второе слово: ");
+        ConsoleMenu.Write("Введите второе слово: ");
 
         string? secondWord = Console.ReadLine();
 
@@ -47,7 +47,7 @@ public class Task1
             if (secondWord.Contains(sign))
             {
                 ConsoleMenu.WriteFiller();
-                ConsoleMenu.WriteContent("""
+                ConsoleMenu.Write("""
                     ОШИБКА! Вы использовали разделитель или разделители
                     при вводе слова, что неправильно.
                     Попробуйте ещё раз (нажмите Enter для выхода).
@@ -62,17 +62,17 @@ public class Task1
         ConsoleMenu.WriteFiller();
 
         if (firstWord.Length == secondWord.Length)
-            ConsoleMenu.WriteContent($"""
+            ConsoleMenu.Write($"""
                 Строки "{firstWord}" и "{secondWord}" равны по длине.
 
                 """);
         else if (StringTools.IsFirstWordLonger(firstWord, secondWord))
-            ConsoleMenu.WriteContent($"""
+            ConsoleMenu.Write($"""
                 Первое слово "{firstWord}" длиннее второго слова "{secondWord}" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.
                 
                 """);
         else
-            ConsoleMenu.WriteContent($"""
+            ConsoleMenu.Write($"""
                 Второе слово "{secondWord}" длиннее первого слова "{firstWord}" на {StringTools.HowWordLonger(firstWord, secondWord)} символов.
                 
                 """
